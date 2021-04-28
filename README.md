@@ -16,6 +16,8 @@
 
 [퀵 정렬](./Algo_Theory/Quick_Sort)
 
+[부분집합](./Algo_Theory/부분집합)
+
 ### SWEA
 
 ---
