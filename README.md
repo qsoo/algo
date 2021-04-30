@@ -14,13 +14,13 @@
 
 ---
 
-[퀵 정렬](./Algo_Theory/Quick_Sort)
+[퀵 정렬](./Algo_Theory/Quick_Sort.md)
 
-[거품정렬](./Algo_Theory/Bubble_Sort)
+[거품정렬](./Algo_Theory/Bubble_Sort.md)
 
-[부분집합](./Algo_Theory/부분집합)
+[부분집합](./Algo_Theory/부분집합.md)
 
-[파스칼 삼각형](./Algo_Theory/파스칼 삼각형)
+[파스칼삼각형](./Algo_Theory/파스칼 삼각형.md)
 
 
 
@@ -31,3 +31,4 @@
 #### D3
 
 [1215](./SWEA/d3_1215)
+
