@@ -20,9 +20,9 @@
 
 [부분집합](./Algo_Theory/부분집합.md)
 
-[파스칼삼각형](./Algo_Theory/파스칼 삼각형.md)
+[파스칼삼각형](./Algo_Theory/파스칼삼각형.md)
 
-
+[이진탐색](./Algo_Theory/Binary_Search.md)
 
 ### SWEA
 
