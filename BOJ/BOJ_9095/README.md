@@ -1,8 +1,5 @@
 ## 9095. 1, 2, 3 더하기
 
-- BFS
-- 완전 탐색
-
 [문제링크](https://www.acmicpc.net/problem/9095)
 
 
@@ -63,4 +60,9 @@ for tc in range(int(input())):
 ```
 
 
+
+**태그**
+
+- BFS
+- 완전 탐색
 
