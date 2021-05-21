@@ -12,6 +12,8 @@
 
 [BOJ](#boj)
 
+[Programmers](#programmers)
+
 ### 이론
 
 ---
@@ -26,9 +28,11 @@
 
 [이진탐색](./Algo_Theory/Binary_Search.md)
 
+---
+
 ### SWEA
 
----
+
 
 #### D3
 
@@ -44,11 +48,7 @@
 
 ---
 
-
-
 ### BOJ
-
----
 
 [2448](./BOJ/BOJ_2448)
 
@@ -81,4 +81,12 @@
 [1389](./BOJ/BOJ_1389)
 
 [2847](./BOJ/BOJ_2847)
+
+
+
+---
+
+### programmers
+
+[42839](./Programmers/42839_소수찾기)
 
