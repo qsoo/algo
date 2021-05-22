@@ -90,3 +90,11 @@
 
 [42839](./Programmers/42839_소수찾기)
 
+
+
+---
+
+### JUNGOL
+
+[1146](./JUNGOL/beginner_coder/1146)
+
