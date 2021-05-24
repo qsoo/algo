@@ -96,7 +96,11 @@
 
 ### JUNGOL
 
-[1146](./JUNGOL/beginner_coder/1146)
+[512](./JUNGOL/language_coder/512)
 
 [551](./JUNGOL/language_coder/551)
+
+[1146](./JUNGOL/beginner_coder/1146)
+
+
 
