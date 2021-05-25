@@ -102,5 +102,5 @@
 
 [1146](./JUNGOL/beginner_coder/1146)
 
-
+[107](./JUNGOL/beginner_coder/107)
 
