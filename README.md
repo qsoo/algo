@@ -118,6 +118,8 @@
 
 [579](./JUNGOL/language_coder/579)
 
+[583](./JUNGOL/language_coder/583)
+
 ---
 
 #### Beginner_coder
