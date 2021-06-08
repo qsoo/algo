@@ -120,6 +120,8 @@
 
 [583](./JUNGOL/language_coder/583)
 
+[233](./JUNGOL/language_coder/233)
+
 
 
 ---
@@ -138,5 +140,5 @@
 
 #### Intermediate_coder
 
-[1141](./JUNGOL/Intermediate_coder/1141)
+[1141](./JUNGOL/Intermediate_coder/1141) (해결 못함)
 
