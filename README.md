@@ -122,6 +122,10 @@
 
 [233](./JUNGOL/language_coder/233)
 
+[236](./JUNGOL/language_coder/236)
+
+[593](./JUNGOL/language_coder/593)
+
 
 
 ---
