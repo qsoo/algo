@@ -126,7 +126,15 @@
 
 [593](./JUNGOL/language_coder/593)
 
+[601](./JUNGOL/language_coder/601)
 
+[182](./JUNGOL/language_coder/182)
+
+[184](./JUNGOL/language_coder/184)
+
+[185](./JUNGOL/language_coder/185)
+
+[187](./JUNGOL/language_coder/187)
 
 ---
 
