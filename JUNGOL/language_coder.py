@@ -695,4 +695,409 @@ def comb(n:int)-> int:
     comb(n+1)
 
 comb(2)
+
+
+N = int(input())
+
+# 재귀 함수
+def recur(target: int, arr: list) -> list:
+    # 종료 조건
+    if target == 1:
+        print(*arr)
+        return
+    else:
+        # 1. 맨 처음 인덱스에 // 2 값 넣어주기
+        arr.insert(0, target//2)
+        recur(target//2, arr)
+recur(N, [N])
+
+
+
+N = int(input())
+arr = [N]
+def check_odd_even(n: int) -> list:
+    # 0. 종료조건
+    if n <= 2:
+        print(*arr)
+        return
+    else:
+        arr.insert(0, n - 2)
+        check_odd_even(n - 2)
+
+check_odd_even(N)
+
+N, M = map(int, input().split())
+
+def recur(n: int, arr: list, sumVal: int):
+    # print(n, m, arr)
+    # 1. 종료 조건 추가 - 값이 더 클 때
+    if sumVal > M:
+        return
+    # 1. 종료조건
+    elif n == N:
+        # 2. 출력 조건
+        if sumVal == M:
+            print(*arr)
+        return
+    else:
+        # 2. 주사위 값 넣어주기
+        for i in range(1, 7):
+            recur(n + 1, arr + [i], sumVal+i)
+
+recur(0, [], 0)
+
+N, M = map(int, input().split())
+
+def recur(n: int, arr: list, sumVal: int):
+    # 1. 종료조건
+    if n == N:
+        if sumVal == M:
+            # 2. 출력 조건
+            print(*arr)
+        return
+    else:
+        # 2. 주사위 값 넣어주기
+        for i in range(1, 7):
+            recur(n + 1, arr + [i], sumVal+i)
+
+def recur2(n: int, arr: list, sumVal: int):
+    # 1. 종료조건
+    if n == N:
+        if sumVal == M:
+            # 2. 출력 조건
+            print(*arr)
+        return
+    else:
+        # 2. 주사위 값 넣어주기
+        for i in range(1, 7):
+            if sumVal + i > M:
+                break
+            recur(n + 1, arr + [i], sumVal+i)
+        return
+# 시간 측정 추가
+import time
+
+start = time.time()  # 시작 시간 저장
+
+# 작업 코드
+recur2(0, [], 0)
+
+
+print("time :", time.time() - start)
+
+N, M = list(map(int,input().split(' ')))
+nums = [0] * N
+
+def comb(depth, total):
+    global nums
+
+    if depth == N:
+        if total == 0:
+            print(*nums)
+        return True
+
+    for i in range(1,7):
+        nums[depth] = i
+        if total - i < 0 or (N-depth) * 6 < total:
+            break
+        comb(depth+1, total-i)
+
+comb(0, M)
+
+
+N = int(input().strip())
+# 1. N의 크기에 맞는 배열 만들어 주기 - 해당 인덱스에 저장하겠다
+arr = [0 for _ in range(N + 1)]
+arr[1] = 1
+arr[2] = 2
+def recur(n: int) -> int:
+    # 1. 종료 조건 설정
+    if n <= 2:
+        return n
+    else:
+        return recur(n - 2) * recur(n - 1) % 100
+
+print(recur(N))
+
+N, M = map(int, input().split())
+
+def recur(n: int, arr:list, sumVal: int):
+    # 1. 종료조건
+    if n == N:
+        if sumVal == M:
+            # 2. 출력 조건
+            print(*arr)
+        return
+    else:
+        # 2. 주사위 값 넣어주기
+        for i in range(1, 7):
+            # 가지 치기 부분에 다음 값들 최대(6일 때)여도 지정한 M보다 작을 때 추가
+            if sumVal + i > M or (N - n) * 6 < M - (sumVal + i):
+                break
+            recur(n + 1, arr + [i], sumVal + i)
+        return
+
+recur(0, [], 0)
+
+N = int(input().strip())
+# 1. N의 크기에 맞는 배열 만들어 주기 - 해당 인덱스에 저장하겠다
+arr = [0 for _ in range(N)]
+arr[0] = 1
+arr[1] = 2
+
+
+def recur(n: int) -> int:
+    # 1. 종료 조건 설정
+    if n == N - 2:
+        return arr[-1]
+    else:
+        arr[n + 2] = arr[n] * arr[n + 1] % 100
+        return recur(n + 1)
+
+print(recur(0))
+
+
+N = int(input().strip())
+
+def recur(target:int, depth:int):
+    # 종료 조건
+    if target == 1:
+        return depth
+
+    # 나누기
+    elif (target % 2):
+        return recur(target // 3, depth + 1)
+    else:
+        return recur(target // 2, depth + 1)
+
+print(recur(N, 0))
+
+# j, k, l
+j, k, l = list(map(int, input().split()))
+
+
+# 각 자릿수 곱 구하기
+def mul(target:int, result:int):
+    # 1. 각 자리수의 곱
+    multiple_target = target % 10
+    # 종료 조건
+    if not target:
+        return result
+    elif multiple_target:
+        result *= multiple_target
+    return mul(target // 10, result)
+
+
+print(mul((j * k * l), 1))
+
+input = 66
+ASCII code =? B
+ASCII code =? z
+ASCII code =?
+
+# 1. input
+while True:
+    N = int(input('ASCII code =? '))
+    if 33 <= N <= 127:
+        print(chr(N))
+    else:
+        break
+
+str = input()
+print(str*2)
+
+str = "Hong Gil Dong"
+print(str[3:7])
+
+string, N = input().split()
+N = int(N)
+for i in range(len(string) - 1, -1, -1):
+    N -=1
+    print(string[i], end='')
+    if not N:
+        break
+
+a = ''
+for i in range(2):
+    a += input().strip()
+print(len(a))
+
+# 1. 65 <= X <= 122(문자)
+# 2. 48 <= X <= 57(숫자)
+while True:
+    x = input().strip()
+    temp = ord(x)
+    if 65 <= temp <= 122:
+        print(x)
+    elif 48 <= temp <= 57:
+        print(temp)
+    else:
+        break
+
+target = input().strip()
+
+for i in range(len(target)):
+    temp = ord(target[i])
+    # 1. 알파벳 걸러주기
+    if 65 <= temp <= 90:
+        print(target[i], end='')
+    # 2. 소문자 대문자로 변환
+    elif 97 <= temp <= 122:
+        print(chr(temp - 32), end='')
+    else:
+        pass
+
+target = list(input().split())
+print(len(target))
+
+str = input().strip()
+length = len(str)
+for i in range(1, (length + 1)):
+    # 1. 오른쪽으로 밀었을 때 앞으로 오는 문자
+    print(str[-i::] + str[:(length - i)])
+
+# inline for문
+a, b = [ord(temp) for temp in input().split()]
+print(a + b, abs(a - b))
+
+a, b = input().split()
+a, b = ord(a), ord(b)
+print(a + b, end=' ')
+# if a > b:
+#     print(a - b)
+# else:
+#     print(b - a)
+print(a - b if a > b else b - a)
+
+print(input()[:5])
+
+# ASCII
+# 32 ~ 64 특수문자
+# 48 ~ 57 숫자
+# 91 ~ 96 특수문자
+# 122(z)
+
+for i in input():
+    temp = ord(i)
+    # 알파벳, 숫자만
+    if 48 <= temp <= 122:
+        # 대문자이면 소문자로
+        if 65 <= temp <= 90:
+            print(i.lower(), end='')
+        # 숫자, 소문자 그대로 출력
+        elif 48 <= temp <= 57 or 97 <= temp <= 122:
+            print(i, end='')
+
+# 정규식 사용
+import re
+# 숫자 + 문자: '/w'에서 '_' 제외
+num = re.compile('[a-zA-Z0-9]')
+
+# findall
+result = num.findall(input())
+print("".join(x.lower() for x in result))
+
+# 일반적인 방법
+target, find_str = input().split()
+# 찾을 index
+i = 0
+find_flag = False
+for x in target:
+    if x == find_str:
+        print(i)
+        find_flag = True
+        break
+    i += 1
+if not find_flag:
+    print('No')
+
+# enumerate 사용
+target, detect = input().split()
+# 0. 찾는 문자 없을 때
+flag = True
+# 1. enumerate 사용위해 list로 변경
+for idx, val in enumerate(list(target)):
+    if val == detect:
+        print(idx)
+        flag = False
+        break
+# 2. 찾는 문자 없을 때
+if flag: print('No')
+arr = input().split()
+print(len(arr[1]) if len(arr[0]) < len(arr[1]) else len(arr[0]))
+
+# 리스트로 변형
+target = list(input().strip())
+while True:
+    idx = int(input().strip()) - 1
+    # 대상 문자열 길이
+    length = len(target)
+    if length <= idx:
+        del target[-1]
+    else:
+        del target[idx]
+    print(''.join(target))
+    # 조건 만족 break
+    if length == 1:
+        break
+
+# 문자열 그대로
+str = input().strip()
+while True:
+    length = len(str)
+    idx = int(input().strip()) - 1
+    # 문자열 index 범위 넘는지 확인
+    if length <= idx:
+        str = str[:-1]
+    else:
+        str = str[:idx] + str[idx + 1:]
+    print(str)
+    if length == 1:
+        break
+
+arr = input().split()
+for idx, val in enumerate(arr):
+    print(f'{idx + 1}. {val}')
+
+arr = input().split()
+# for i in range(len(arr)):
+#     print(f'{i + 1}. {arr[i]}')
+print('\n'.join(f'{i + 1}. {arr[i]}' for i in range(len(arr))))
+
+arr = []
+while True:
+    arr = [input()] + arr
+    if len(arr) == 5:
+        break
+
+print('\n'.join(i for i in arr))
+
+
+arr = input().split()
+
+for i in range(len(arr)):
+    if not i % 2:
+        print(arr[i])
+arr = []
+for _ in range(10):
+    arr.append(input().strip())
+alphabet = input().strip()
+
+# 1. 마지막 인덱스[-1]의 단어가 해당 alphabet과 같을 때 print
+for i in range(10):
+    if arr[i][-1] == alphabet:
+        print(arr[i])
+string = 'Hong Gil Dong'
+print(string)
+
+print(f"{input().strip()}fighting")
+
+a, b = input().split()
+print(f'{a[:2]}{b[2:]}{a[:2]}')
+string = input().strip()
+
+print("Yes" if "c" in string else "No", end=' ')
+print("Yes" if "ab" in string else "No")
+
 '''
+
