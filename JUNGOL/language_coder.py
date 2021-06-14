@@ -1099,5 +1099,40 @@ string = input().strip()
 print("Yes" if "c" in string else "No", end=' ')
 print("Yes" if "ab" in string else "No")
 
+string = input().split()
+result = []
+for i in range(len(string) - 1, 0, -1):
+    for j in range(len(string[i])):
+        # 순서 뒤로 밀어주기(ord(i) > ord(i + 1)
+        if ord(string[i - 1][j]) > ord(string[i][j]):
+            string[i - 1], string[i] = string[i], string[i - 1]
+            break
+        # 순서 그대로
+        elif ord(string[i - 1][j]) < ord(string[i][j]):
+            break
+        # 다음 알파벳 비교
+
+print(string[0])
+# 1. 5개 문자 입력받기
+arr = []
+for _ in range(5):
+    arr.append(input().strip())
+# arr = list(input().strip()) # 이런 식으로 쓰면 문자 하나씩 원소로 들어감['J','u' ...]
+
+# 2. 문자열 역순 정렬(아마도 앞부터 순서 비교해서 숫자가 큰 값이 맨 앞으로 나오는 식)
+for i in range(4):
+    for j in range(0, 4 - i):
+        # 3. 각 문자열의 수 구하기
+        for k in range(len(arr[j])):
+            if ord(arr[j][k]) < ord(arr[j + 1][k]):
+                # 4. swap
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                break
+            elif ord(arr[j][k]) > ord(arr[j + 1][k]):
+                break
+
+print('\n'.join(string for string in arr))
 '''
 
+print(ord('a'))
+print(ord('c'))
