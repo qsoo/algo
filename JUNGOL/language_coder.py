@@ -1133,6 +1133,3 @@ for i in range(4):
 
 print('\n'.join(string for string in arr))
 '''
-
-print(ord('a'))
-print(ord('c'))
