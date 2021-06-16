@@ -1132,4 +1132,26 @@ for i in range(4):
                 break
 
 print('\n'.join(string for string in arr))
+# 48...5a4
+# 50.1*34
+# 1. 문자열로 입력
+string = input().strip()
+result = ''
+# 1 - 1. 끝까지 진행했는데 에러 발생하지 않으면 모두 실수부
+is_float = False
+# 2. 문자열 체크를 통해 실수부 변환 가능한 부분만 가져오기
+for i in range(2, len(string) + 1):
+    temp = string[:i]
+    # 실수 형태로 변환했을 때 작동하는 지 확인
+    try:
+        float(temp)
+        is_float = True
+    except:
+        result = float(string[:i-1])
+        is_float = False
+        break
+if is_float:
+    result = float(string)
+print(int(result * 2))
+print('{:.2f}'.format(round(result, 2)))
 '''
