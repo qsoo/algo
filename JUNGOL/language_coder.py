@@ -1154,4 +1154,64 @@ if is_float:
     result = float(string)
 print(int(result * 2))
 print('{:.2f}'.format(round(result, 2)))
+string = input().split()
+result = ''
+for i in string:
+    result += i
+
+for i in range(0, len(result)// 3 + 1):
+    print(result[3*i : 3* (i+1)])
+string = input().split()
+
+for i in range(len(string) - 1, -1, -1):
+    print(string[i])
+dict_list = ['flower', 'rose', 'lily', 'daffodil', 'azalea']
+
+target = input().strip()
+temp = 0
+for i in dict_list:
+    if i[1] == target or i[2] == target:
+        print(i)
+        temp += 1
+print(temp)
+result = []
+while True:
+    target = input().strip()
+    if target == '0':
+        break
+    result.append(target)
+
+print(len(result))
+for i in range(0, len(result), 2):
+    print(result[i])
+
+N = int(input().strip())
+arr = []
+for _ in range(N):
+    arr.append(input().strip())
+
+arr.sort()
+for i in arr:
+    print(i)
+i = 0
+arr = []
+while i < 5:
+    i += 1
+    arr.append(input().strip())
+
+target = []
+for _ in range(2):
+    target.append(input().strip())
+
+is_catch = False
+
+for i in arr:
+    for j in target:
+        if j in i:
+            print(i)
+            is_catch = True
+            break
+
+if not is_catch:
+    print("none")
 '''
