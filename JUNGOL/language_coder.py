@@ -1214,4 +1214,202 @@ for i in arr:
 
 if not is_catch:
     print("none")
+
+arr = input().split()
+n = int(arr[2])
+A = arr[0] + arr[1]
+B = A[:n] + arr[1][n:]
+
+print(A, B, sep='\n')
+
+# 0 - 48, 9 - 57 ascii 코드 기준
+arr = input().split()
+result = []
+is_completed = False
+for target in arr:
+    for i in range(len(target)):
+        ascii_code = ord(target[i])
+        if ascii_code < 48 or ascii_code > 57:
+            pivot = i
+            is_completed = True
+            break
+    if not is_completed:
+        pivot = len(target)
+    # 마지막까지 or break문 만났을 때 전까지가 정수로 변환 가능
+    result.append(int(target[:pivot]))
+
+print(result[0] * result[1])
+
+result = []
+while True:
+    target = input().strip()
+    if target == 'END':
+        break
+    result.append(target)
+
+for i in result:
+    print(i[::-1])
+
+arr = input().split()
+
+# 1. 실수 소수점 반올림 처리
+arr[1] = str(round(float(arr[1]), 3))
+
+# 2. 2등분
+temp = ''
+for i in arr:
+    temp += i
+
+pivot = len(temp)
+if pivot % 2: print(temp[:pivot // 2 + 1], temp[pivot // 2 + 1:], sep='\n')
+else: print(temp[:pivot // 2], temp[pivot // 2:], sep='\n')
+
+arr = input().split()
+print(f'Name : {arr[0]}')
+print(f'School : {arr[1]}')
+print(f'Grade : {arr[2]}')
+
+school_name, grade = input().split()
+
+print('6 grade in Jejuelementary School')
+print(f'{grade} grade in {school_name} School')
+
+arr = []
+for _ in range(2):
+    temp, korean, english = input().split()
+    korean, english = int(korean), int(english)
+    arr.append([temp,korean, english])
+avg = []
+for i in range(1,3):
+    temp = (arr[0][i] + arr[1][i]) // 2
+    avg.append(temp)
+
+arr.append(['avg'] + avg)
+
+for i in arr:
+    print(*i)
+
+triangle = list(map(int, input().split()))
+a, b = 0, 0
+for i in range(0, 6, 2):
+    a += triangle[i]
+    b += triangle[i + 1]
+
+a /= 3
+b /= 3
+
+print(f'({round(a, 1)}, {round(b, 1)})')
+
+arr = []
+for _ in range(5):
+    temp = input().split()
+    name, height = temp[0], int(temp[1])
+    arr.append([name, height])
+
+# 1. 작은 순으로 정렬
+result = sorted(arr, key=lambda x : x[1])
+print(*result[0])
+
+arr = []
+# 1. 5명 입력 받기
+for _ in range(5):
+    name, height, weight = input().split()
+    arr.append([name, int(height), round(float(weight), 1)])
+
+# 2. 이름 순 정렬
+name = sorted(arr, key=lambda x: x[0])
+# 3. 몸무게 무거운 순 정렬(내림차순)
+weight = sorted(arr, key=lambda x: -x[2])
+
+print('name')
+for i in name:
+    print(*i)
+print()
+print('weight')
+for i in weight:
+    print(*i)
+
+name, tel, addr = input().split()
+
+print(f'name : {name}')
+print(f'tel : {tel}')
+print(f'addr : {addr}')
+
+arr = []
+for _ in range(3):
+    temp = input().split()
+    arr.append(temp)
+
+arr = sorted(arr, key=lambda x : x[0])
+name, tel, addr = arr[0]
+
+print(f'name : {name}')
+print(f'tel : {tel}')
+print(f'addr : {addr}')
+
+arr = []
+for _ in range(2):
+    temp = list(map(int, input().split()))
+    arr.append(temp)
+# 1. 최소 직사각형의 좌표 (MinX1, MinY1), (MaxX2, MaxY2)
+result = [0 for _ in range(4)]
+
+for i in range(4):
+    min_temp, max_temp = float('inf'), 0
+    for j in range(len(arr)):
+        # 왼쪽 아래 좌표
+        if i < 2:
+            if arr[j][i] < min_temp:
+                min_temp = arr[j][i]
+
+            result[i] = min_temp
+        else:
+            if arr[j][i] > max_temp:
+                max_temp = arr[j][i]
+            result[i] = max_temp
+
+print(*result)
+
+arr = []
+for _ in range(2):
+    temp = list(map(int, input().split()))
+    arr.append(temp)
+# 1. 최소 직사각형의 좌표 (MinX1, MinY1), (MaxX2, MaxY2)
+result = [0 for _ in range(4)]
+
+for i in range(4):
+    min_temp, max_temp = float('inf'), 0
+    # 조건에 맞게 좌표 추출
+    if (i < 2 and (arr[0][i] < arr[1][i])) or (i >= 2 and (arr[0][i] > arr[1][i])):
+        temp = arr[0][i]
+    else:
+        temp = arr[1][i]
+
+    result[i] = temp
+
+print(*result)
+
+arr = []
+for _ in range(2):
+    temp = list(map(float, input().split()))
+    arr.append(temp)
+
+height, weight = int(((arr[0][0] + arr[1][0]) / 2) + 5), round(((arr[0][1] + arr[1][1]) / 2) - 4.5, 1)
+print(f'height : {height}cm')
+print(f'weight : {weight}kg')
+
+arr = []
+for _ in range(int(input())):
+    temp = input().split()
+    total = 0
+    for i in range(1,4):
+        temp[i] = int(temp[i])
+        total += temp[i]
+    temp.append(total)
+    arr.append(temp)
+
+arr = sorted(arr, key=lambda x: -x[4])
+
+for i in range(len(arr)):
+    print(*arr[i])
 '''

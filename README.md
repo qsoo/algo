@@ -116,15 +116,35 @@
 
 ### JUNGOL
 
+<br>
+
 #### Language_coder
+
+<br>
+
+##### 입력
 
 [512](./JUNGOL/language_coder/512)
 
-[551](./JUNGOL/language_coder/551)
+[107](./JUNGOL/language_coder/107)
+
+<br>
+
+##### 선택제어문
 
 [632](./JUNGOL/language_coder/632)
 
+<br>
+
+##### 반복제어문3
+
+[551](./JUNGOL/language_coder/551)
+
 [145](./JUNGOL/language_coder/145)
+
+<br>
+
+##### 배열2
 
 [564](./JUNGOL/language_coder/564)
 
@@ -136,13 +156,31 @@
 
 [168](./JUNGOL/language_coder/168)
 
+<br>
+
+##### 함수2
+
 [579](./JUNGOL/language_coder/579)
 
 [583](./JUNGOL/language_coder/583)
 
+<br>
+
+##### 함수3
+
+[590](./JUNGOL/language_coder/590)
+
+[231](./JUNGOL/language_coder/231)
+
 [233](./JUNGOL/language_coder/233)
 
+[234](./JUNGOL/language_coder/234)
+
 [236](./JUNGOL/language_coder/236)
+
+<br>
+
+##### 문자열1
 
 [593](./JUNGOL/language_coder/593)
 
@@ -156,17 +194,25 @@
 
 [187](./JUNGOL/language_coder/187)
 
-[590](./JUNGOL/language_coder/590)
+<br>
 
-[231](./JUNGOL/language_coder/231)
+##### 문자열2
 
 [610](./JUNGOL/language_coder/610)
-
-[234](./JUNGOL/language_coder/234)
 
 [611](./JUNGOL/language_coder/611)
 
 [193](./JUNGOL/language_coder/193)
+
+[215](./JUNGOL/language_coder/215)
+
+<br>
+
+##### 구조체
+
+[617](./JUNGOL/language_coder/617)
+
+[197](./JUNGOL/language_coder/197)
 
 ---
 
@@ -175,8 +221,6 @@
 #### Beginner_coder
 
 [1146](./JUNGOL/beginner_coder/1146)
-
-[107](./JUNGOL/beginner_coder/107)
 
 
 
