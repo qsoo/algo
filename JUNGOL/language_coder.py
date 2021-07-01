@@ -1412,4 +1412,93 @@ arr = sorted(arr, key=lambda x: -x[4])
 
 for i in range(len(arr)):
     print(*arr[i])
+
+n = int(input())
+print(f'{n // 10}...{n % 10}')
+
+def four_rule(a: int, b: int) -> str:
+    print(f'{a} + {b} = {a + b}')
+    print(f'{a} - {b} = {a - b}')
+    print(f'{a} * {b} = {a * b}')
+    print(f'{a} / {b} = {a // b}')
+
+a, b = map(int, input().split())
+four_rule(a, b)
+
+arr = list(map(int, input().split()))
+
+for i in range(0, len(arr), 2):
+    print(arr[i], end=' ')
+
+arr = list(map(float, input().split()))
+
+for i in arr:
+    print(round(i, 1), end=' ')
+
+n = int(input())
+arr = [0 for _ in range(n)]
+arr = list(map(float, input().split()))
+for i in arr:
+    print('{0:0.2f}'.format(round(i, 2)), end=' ')
+print()
+print(f'hap : {round(sum(arr), 2):0.2f}')
+print(f'avg : {round(sum(arr) / n, 2):0.2f}')
+
+input()
+arr = list(map(int, input().split()))
+
+def bubble_sort(arr:list, k:int)-> list:
+    # 0. 종료 조건
+    if k == 1:
+        return arr
+    # 1. 첫 요소 맨 뒤까지 비교하면서 이동
+    for i in range(0, k-1):
+        if arr[i] < arr[i + 1]:
+            arr[i], arr[i + 1] = arr[i + 1], arr[i]
+
+    return bubble_sort(arr, k - 1)
+
+print(*bubble_sort(arr, len(arr)))
+
+input()
+arr = list(map(int, input().split()))
+arr.sort(reverse=True)
+print(*arr)
+
+print(id('string'), id(float(12.32)))
+
+print('*'*int(input()))
+
+a, b = map(int, input().split())
+print(abs(a - b))
+if a > b: print(a - b)
+else: print(b - a)
+
+arr = list(map(int, input().split()))
+odd, even = 0, 0
+
+for i in arr:
+    if i % 2:
+        odd += 1
+    else:
+        even += 1
+
+print(f'odd : {odd}')
+print(f'even : {even}')
+
+input()
+arr = list(map(int, input().split()))
+print(f'max : {max(arr)}')
+print(f'min : {min(arr)}')
+
+a, b = map(int, input().split())
+result = 0
+if a > b:
+    for i in range(b, a+1):
+        result += i
+else:
+    for i in range(a, b+1):
+        result += i
+
+print(result)
 '''

@@ -216,6 +216,14 @@
 
 [197](./JUNGOL/language_coder/197)
 
+<br>
+
+##### 포인터
+
+[624](./JUNGOL/language_coder/624)
+
+[625](./JUNGOL/language_coder/625)
+
 ---
 
 
