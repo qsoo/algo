@@ -1501,4 +1501,162 @@ else:
         result += i
 
 print(result)
+
+arr = list(map(float, input().split()))
+
+print(f'{round((arr[0] + arr[-1]) / 2, 1):.1f}')
+
+arr = []
+for i in range(10):
+    a, b = input().split()
+    b = int(b)
+    arr.append([i, a,b])
+
+# 1. 정렬된 배열 생성
+new_arr = sorted(arr, key=lambda x: x[2])
+
+# 2. 나보다 큰 값의 개수를 구하면 내 등수 알 수 있음
+for i in range(len(new_arr)):
+    # 나보다 큰 값이 없으면 1등이니 초기 변수는 1
+    temp = 1
+    for j in range(i+1, len(new_arr)):
+        if new_arr[i][2] < new_arr[j][2]:
+            temp += 1
+    # 2-1. 확인이 끝나면 등수 정보 리스트에 추가
+    new_arr[i].append(temp)
+
+# 3. 번호순 정렬
+result = sorted(new_arr, key=lambda x: x[0])
+
+# 4. 출력 형식에 맞게 출력
+print('Name Score Rank')
+for i in range(len(result)):
+    print(f'{result[i][1]:>4} {result[i][2]:>5} {result[i][3]:>4}')
+
+arr = []
+for _ in range(2):
+    temp = input()
+    arr.append([temp, len(temp)])
+
+arr.sort(key=lambda x: x[1])
+for i in range(2):
+    print(arr[i][0])
+
+arr = []
+for _ in range(int(input())):
+    arr.append(input())
+
+print(*arr[::-1], sep='\n')
+
+while True:
+    length = float(input())
+    if not length:
+        break
+    print(f'{round(length / (2 * 3.14), 2):.2f}')
+
+a, b = map(float, input().split())
+total = round(a + b, 2)
+a, b = round(a, 2), round(b, 2)
+print(f'{a:.2f} {b:.2f} {total:.2f}')
+
+arr = list(map(int, input().split()))
+total = sum(arr)
+avg = total // 3
+remainder = total % 3
+
+print(f'{total} {avg}...{remainder}')
+
+a, b, c = input().split()
+if c == '+':
+    print(f'{a} {c} {b} = {int(a) + int(b)}')
+elif c == '-':
+    print(f'{a} {c} {b} = {int(a) - int(b)}')
+elif c == '*':
+    print(f'{a} {c} {b} = {int(a) * int(b)}')
+elif c == '/':
+    print(f'{a} {c} {b} = {int(a) // int(b)}')
+elif c == '%':
+    print(f'{a} {c} {b} = {int(a) % int(b)}')
+
+def factorial(n:int, result:int)-> int:
+    if n <= 1:
+        if n == 0:
+            return 1
+        return result
+    return factorial(n-1, result*n)
+print(factorial(int(input()), 1))
+
+# 1. 모든 정수 입력 받기
+arr = list(map(int, input().split()))
+cut_point = arr.index(0)
+arr = arr[:cut_point]
+# 2. 3과 5의 배수 찾기
+result, temp = [], 0
+for i in range(len(arr)):
+    if not (arr[i] % 3) and not (arr[i] % 5):
+        result.append(arr[i])
+        temp += 1
+print(*result, temp if temp else temp, sep='\n')
+
+def upper(n:int):
+    for i in range(n):
+        print(f'{"* " * (2 * i + 1):^{4*n - 2}}')
+
+
+def lower(n:int):
+    for i in range(n - 1, 0, -1):
+        print(f'{"* " * (2 * i - 1):^{4*n - 2}}')
+
+
+def result(n:int):
+    upper(n)
+    lower(n)
+
+result(int(input().strip()))
+
+# 윤년: 100으로 나눠지지 않고 4로 나누어 떨어지는 해, 100으로 나누어지고 400으로 나눠지는 해
+a, b = map(int, input().split())
+temp = 0
+for i in range(a, b + 1):
+    if not (i % 4) and (i % 100):
+        temp += 1
+    elif not (i % 100) and not (i % 400):
+        temp += 1
+
+print(temp)
+
+arr = []
+for i in range(int(input())):
+    temp = list(map(int, input().split()))
+    avg = round(sum(temp) / 3, 1)
+    arr.append(avg)
+arr.sort(reverse=True)
+print(*arr, sep='\n')
+
+sentence = input()
+arr = sentence.split()
+max_sentence, length = [], 0
+for i in range(len(arr)):
+    temp = len(arr[i])
+
+    if length == temp:
+        length = temp
+        max_sentence.append(arr[i])
+
+    elif length < temp:
+        length = temp
+        max_sentence = []
+        max_sentence.append(arr[i])
+print(len(sentence))
+print(*max_sentence)
+
+arr = []
+for _ in range(10):
+    arr.append(input().strip())
+
+target = input().strip()
+arr.sort()
+for i in arr:
+    if target in i:
+        print(i)
 '''
