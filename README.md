@@ -250,6 +250,12 @@
 
 #### Beginner_coder
 
+<br>
+
+##### 도형만들기1
+
+[1291: 구구단](./JUNGOL/LCoder/1291)
+
 [1146](./JUNGOL/beginner_coder/1146)
 
 
