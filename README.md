@@ -254,7 +254,11 @@
 
 ##### 도형만들기1
 
-[1291: 구구단](./JUNGOL/LCoder/1291)
+[1291: 구구단](./JUNGOL/beginner_coder/1291)
+
+[1341: 구구단2](./JUNGOL/beginner_coder/1341)
+
+
 
 [1146](./JUNGOL/beginner_coder/1146)
 
